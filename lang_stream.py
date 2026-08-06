@@ -21,12 +21,14 @@ st.write("Ask a question, get an AI answer, and view the automated quality evalu
 llm = ChatGroq(
     model="llama-3.3-70b-versatile", 
     temperature=0.7, 
-    max_retries=3
+    max_retries=3,
+    groq_api_key=groq_api_key
 )
 eval_llm = ChatGroq(
     model="llama-3.3-70b-versatile", 
     temperature=0.1, 
-    max_retries=3
+    max_retries=3,
+    groq_api_key=groq_api_key
 )
 
 # Main Chat Chain
